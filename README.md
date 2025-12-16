@@ -14,14 +14,24 @@ This was mainly made to test out bitwise operations for storage, and a certain g
 
 <details>
   <summary>Linux/MacOS</summary>
+  Kitty version requires a terminal with Kitty Terminal Graphics Protocol support. Examples include Kitty, iTerm2 (MacOS), WezTerm, Ghostty, and Konsole.
   
-  placeholder
+  Non-kitty version *should* run on your default terminal.
+  
+  Download binaries from [Releases](https://github.com/esncu/Pale-Luna/releases) and run them.
+
+  Alternatively, clone the repo and compile the version you want. (Tested with G++)
 </details>
 
 <details>
   <summary>Windows</summary>
+  Kitty version (untested on windows) requires a terminal with Kitty Terminal Graphics Protocol support. Examples include WezTerm.
   
-  placeholder
+  Non-kitty version *should* run on your default terminal.
+  
+  Download v1.1 exe from [Releases](https://github.com/esncu/Pale-Luna/releases) and run it.
+  
+  Alternatively, clone the repo and compile the version you want. (Tested with G++)
 </details>
 
 ## Guide (spoilers)
