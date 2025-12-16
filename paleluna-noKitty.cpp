@@ -1,5 +1,4 @@
 #include <iostream>
-#include <sys/ioctl.h>
 #include <string>
 #include <cstring>
 #include <thread>
@@ -7,11 +6,10 @@
 #include <cctype>
 #include <cstdlib> // Required for std::system
 
-uint8_t d; //ABCD EFGH A=Extra?, B=Rope, C=K.Paulsen, D,Shovel, FGH=screenProgress
-std::string in;
-struct winsize w;
-
-#define wait(x) std::this_thread::sleep_for(std::chrono::milliseconds(x))
+#ifndef _WIN32
+  #include <sys/ioctl.h>
+  struct winsize w;
+#endif
 
 void clear(){
 #ifdef _WIN32
@@ -20,6 +18,11 @@ void clear(){
   std::system("clear");
 #endif
 }
+
+uint8_t d; //ABCD EFGH A=Extra?, B=Rope, C=K.Paulsen, D,Shovel, FGH=screenProgress
+std::string in;
+
+#define wait(x) std::this_thread::sleep_for(std::chrono::milliseconds(x))
 
 void c(){
   while(true)
@@ -35,24 +38,34 @@ void anim(std::string s, int ms){
 }
 
 std::string center(std::string s){
-  ioctl(0, TIOCGWINSZ, &w);
-  if(s.size() > w.ws_col)
-    return s;
-  for(int i = 0; i <= (w.ws_col - s.size())/2; ++i)
-    s = ' ' + s;
+  #ifndef _WIN32
+    ioctl(0, TIOCGWINSZ, &w);
+    if(s.size() > w.ws_col)
+      return s;
+    for(int i = 0; i <= (w.ws_col - s.size())/2; ++i)
+      s = ' ' + s;
+  #endif
   return s;
 }
 
 int main() {
-  ioctl(0, TIOCGWINSZ, &w);
+  #ifndef _WIN32
+    ioctl(0, TIOCGWINSZ, &w);
+  #endif
 
   //title
   clear();
-  std::cout
-    <<"     █████▄  ▄▄▄  ▄▄    ▄▄▄▄▄   ██     ▄▄ ▄▄ ▄▄  ▄▄  ▄▄▄ \n"
-    <<"     ██▄▄█▀ ██▀██ ██    ██▄▄    ██     ██ ██ ███▄██ ██▀██\n"
-    <<"     ██     ██▀██ ██▄▄▄ ██▄▄▄   ██████ ▀███▀ ██ ▀██ ██▀██\n"
-    <<"\nCaps Lock is recommended for this game.\nPress enter to start...";
+  #ifndef _WIN32
+    std::cout
+      <<"     █████▄  ▄▄▄  ▄▄    ▄▄▄▄▄   ██     ▄▄ ▄▄ ▄▄  ▄▄  ▄▄▄ \n"
+      <<"     ██▄▄█▀ ██▀██ ██    ██▄▄    ██     ██ ██ ███▄██ ██▀██\n"
+      <<"     ██     ██▀██ ██▄▄▄ ██▄▄▄   ██████ ▀███▀ ██ ▀██ ██▀██\n"
+      <<"\nCaps Lock is recommended for this game.\nPress enter to start...";
+  #else
+    anim("P A L E  L U N A", 50);
+    std::cout<<"\nCaps Lock is recommended for this game.\nPress enter to start...";
+  #endif
+
   std::cin.get();
 
   //s1
