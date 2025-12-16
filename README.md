@@ -1,0 +1,45 @@
+# Pale Luna
+SFBA, 1990s.
+
+You find a dusty floppy in your school's storeroom. It faintly has the words _Pale Luna_ sharpied on it.
+
+Online reviews say it's the worst text-based adventure ever made, with almost all copies being destroyed. Still, it's a rare find, so you plug it into your computer to find out what made it so enigmatic.
+
+## Info
+Based on [the Pale Luna creepypasta](https://creepypasta.fandom.com/wiki/Pale_Luna), this adaption is a lil bit fancier with text animations, but is mostly faithful to the source material.
+
+This was mainly made to test out bitwise operations for storage, and a certain graphics protocol for Linux/MacOS which is not yet implemented on v1.0.
+
+## Installation
+
+<details>
+  <summary>Linux/MacOS</summary>
+  
+  placeholder
+</details>
+
+<details>
+  <summary>Windows</summary>
+  
+  placeholder
+</details>
+
+## Guide (spoilers)
+All instructions must be CAPITALIZED. Since this is faithful to the original creepypasta, that serves as a guide for this game aswell.
+<details>
+  <summary>Screen 1</summary>
+  
+  `PICK UP ROPE` before `PICK UP GOLD`, `OPEN DOOR` before `GO EAST`. Remember to `PICK UP` all items before leaving. 
+</details>
+
+<details>
+  <summary>Screen 2</summary>
+  
+  North, East, South, East, North, West, West, South.
+</details>
+
+<details>
+  <summary>Screen 3</summary>
+  
+  `DIG HOLE`, `DROP GOLD`, then finally `FILL HOLE`.
+</details>
