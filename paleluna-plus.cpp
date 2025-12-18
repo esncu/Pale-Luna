@@ -55,12 +55,13 @@ const std::string& b64_Steps = "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA
 
 void img(){
 #ifdef __linux__  //kitty
+  ioctl(0, TIOCGWINSZ, &w);
   std::cout<<"\n";
   for(int i = 0; i < w.ws_col/4; ++i)
     std::cout<<" ";
   std::cout
     << "\033_G"
-    << "a=T,f=100,c=" << w.ws_col/2 << ",r=" << w.ws_row/2 <<";"
+    << "a=T,f=100,c=" << w.ws_col/2 <<",r="<< w.ws_col/4 << ";"
     << b64_Treasure
     << "\033\\"
     "\n";
@@ -70,8 +71,8 @@ void img(){
         << "\x1b]1337;File="
         << "name=inline;"
         << "inline=1;"
-        << "width=" << 32 << ";"
-        << "height=" << 32 << ":"
+        << "width=32;"
+        << "height=32:"
         << b64_Treasure
         << "\x07";
     std::cout.flush();
@@ -281,7 +282,6 @@ void render(){
     }
     std::cout<<"\n";
   }
-  std::cout<<"\nWASD to move.";
 }
 bool checkPos(int x, int y){
   char c = Maps[d & 0x07].elements[player_y + y][player_x + x];
