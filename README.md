@@ -14,9 +14,9 @@ This was mainly made to test out bitwise operations for storage, and a certain g
 
 <details>
   <summary>Linux/MacOS</summary>
-  Kitty version requires a terminal with Kitty Terminal Graphics Protocol support. Examples include Kitty, iTerm2 (MacOS), WezTerm, Ghostty, and Konsole.
+  Plus version requires a terminal with Kitty Terminal Graphics Protocol (iTerm2 Inline Image Protocol for MacOS) support. Examples include Kitty, iTerm2 (MacOS), WezTerm, Ghostty, and Konsole.
   
-  Non-kitty version *should* run on your default terminal.
+  Faithful version *should* run fine on your default terminal.
   
   Download binaries from [Releases](https://github.com/esncu/Pale-Luna/releases) and run them.
 
@@ -25,11 +25,11 @@ This was mainly made to test out bitwise operations for storage, and a certain g
 
 <details>
   <summary>Windows</summary>
-  Kitty version (untested on windows) requires a terminal with Kitty Terminal Graphics Protocol support. Examples include WezTerm.
+  Plus requires a terminal with iTerm2 Inline Image Protocol support. Examples include WezTerm.
   
-  Non-kitty version *should* run on your default terminal.
+  Faithful version *should* run fine on your default terminal.
   
-  Download v1.1 exe from [Releases](https://github.com/esncu/Pale-Luna/releases) and run it.
+  Download the exe from [Releases](https://github.com/esncu/Pale-Luna/releases) and run it.
   
   Alternatively, clone the repo and compile the version you want. (Tested with G++)
 </details>
