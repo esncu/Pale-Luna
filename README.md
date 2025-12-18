@@ -8,7 +8,7 @@ Online reviews say it's the worst text-based adventure ever made, with almost al
 ## Info
 Based on [the Pale Luna creepypasta](https://creepypasta.fandom.com/wiki/Pale_Luna), this adaption is a lil bit fancier with text animations, but is mostly faithful to the source material.
 
-This was mainly made to test out bitwise operations for storage, and a certain graphics protocol for Linux/MacOS which is not yet implemented on v1.0.
+This was mainly made to test out bitwise operations for storage, and terminal graphics protocols for use in CLI games.
 
 ## Installation
 
