@@ -196,8 +196,8 @@ int main() {
   
   clear();
   anim(center("Congratulations.\n"), 66);
-  anim(center("—— 40.24248 ——\n"), 100);
-  anim(center("—— -121.4434 ——\n"), 100);
+  anim(center("--  40.24248 --\n"), 100);
+  anim(center("-- -121.4434 --\n"), 100);
 
   return 0;
 }
